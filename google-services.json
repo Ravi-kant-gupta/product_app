@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "495043208250",
+    "project_id": "product-app-4a4f6",
+    "storage_bucket": "product-app-4a4f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495043208250:android:b50df5c531b8cd1f7a4103",
+        "android_client_info": {
+          "package_name": "com.project.apnastore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJvlTpDVLxsZfCZSQFbpATMMl4hEdwveo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
