@@ -8,6 +8,8 @@ import 'package:product_app/Home%20Screen/repository/product_repository.dart';
 class HomeController extends GetxController {
   late ProductRes res;
   int? index;
+  RxList<Product> productList = <Product>[].obs;
+  RxList numberOfProduct = [].obs;
 
   @override
   void onInit() async {
@@ -15,13 +17,22 @@ class HomeController extends GetxController {
     super.onInit();
   }
 
+  addProducttoCard(int? id){
+    if(numberOfProduct.contains(id) != true){
+      numberOfProduct.add(id);
+    }
+
+  }
   Future<void> getDataMethod() async {
     try {
       var result = await productRepository.getProductData();
-      res = ProductRes.fromJson(result);
+      if(result['result'] == "success"){
+        res = ProductRes.fromJson(result);
+        productList.value = res.product ?? [];
+      }
       print(res);
     } catch (e) {
-      print("dhbfbdh");
+      print("dhbfbdh$e");
     }
   }
 }

@@ -30,8 +30,10 @@ class Product {
   String? imageUrl;
   String? category;
   String? price;
+  String? description;
+  String? rating;
 
-  Product({this.id, this.name, this.imageUrl, this.category});
+  Product({this.id, this.name, this.imageUrl, this.category,this.rating,this.description,this.price});
 
   Product.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -39,6 +41,8 @@ class Product {
     imageUrl = json['image_url'];
     category = json['category'];
     price = json['price'];
+    description =json['description'];
+    rating = json['rating'];
   }
 
   Map<String, dynamic> toJson() {
@@ -48,6 +52,8 @@ class Product {
     data['image_url'] = this.imageUrl;
     data['category'] = this.category;
     data['price'] = this.price;
+    data['description'] = this.description;
+    data['rating'] = this.rating;
     return data;
   }
 }
